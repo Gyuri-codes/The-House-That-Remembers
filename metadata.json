@@ -1,0 +1,6 @@
+{
+  "name": "The House That Remembers",
+  "description": "An immersive first-person psychological horror web game inspired by classic browser horror experiences like Hotel 626.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

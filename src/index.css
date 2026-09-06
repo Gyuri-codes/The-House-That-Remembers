@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: #d1d1d1;
+    font-family: 'Cinzel', serif;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+/* Artistic Flair - Analog Surveillance & Film Grain */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+@keyframes filmGrain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-1.5%, -2%); }
+  30% { transform: translate(2%, 1.5%); }
+  50% { transform: translate(-1%, 1.5%); }
+  70% { transform: translate(1.5%, -1%); }
+  90% { transform: translate(-1%, 1%); }
+}
+
+.animate-film-grain {
+  animation: filmGrain 0.3s steps(4) infinite;
+}
+
+@keyframes horrorPulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.35; }
+}
+
+.animate-horror-pulse {
+  animation: horrorPulse 2.2s ease-in-out infinite;
+}
+
